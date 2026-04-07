@@ -54,7 +54,7 @@ jobs:
       
       # This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see [Using artifact attestations to establish provenance for builds](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
       - name: Generate artifact attestation
-        uses: attest@v4
+        uses: actions/attest@v4
         with:
           subject-name: ${{ env.REGISTRY }}/nodered
           subject-digest: ${{ steps.push.outputs.digest }}
@@ -101,7 +101,7 @@ jobs:
       
       # This step generates an artifact attestation for the image, which is an unforgeable statement about where and how it was built. It increases supply chain security for people who consume the image. For more information, see [Using artifact attestations to establish provenance for builds](/actions/security-guides/using-artifact-attestations-to-establish-provenance-for-builds).
       - name: Generate artifact attestation
-        uses: attest@v4
+        uses: actions/attest@v4
         with:
           subject-name: ${{ env.REGISTRY }}/artemis
           subject-digest: ${{ steps.push.outputs.digest }}
