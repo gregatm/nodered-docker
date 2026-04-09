@@ -4,7 +4,6 @@ COPY --chown=node-red:root entrypoint.sh package.json /usr/src/node-red/
 # Install node-red-cluster storage module
 RUN chmod +x entrypoint.sh && \
     git clone https://github.com/gregatm/node-red-cluster.git && \
-    cp tsconfig.cjs.json node-red-cluster/ && \
     cd node-red-cluster && npm install && \
     npm run build && \
     cd .. && \
