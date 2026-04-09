@@ -42,7 +42,8 @@ RUN npm install passport-oauth2 && \
     mv package.json.tmp package.json && \
     rm -r ./node-red-cluster
 
-COPY flows-package.json /data/package.json
+COPY entrypoint.sh /usr/src/node-red/
+COPY healthcheck.js /
 
 RUN cd /data && npm install
 
