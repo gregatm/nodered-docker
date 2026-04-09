@@ -1,6 +1,6 @@
 var http = require('http');
 var https = require('https');
-var settings = require(process.env.NODE_RED_WORKDIR + 'settings.js');
+var settings = require((process.env.NODE_RED_WORKDIR || '/data') + 'settings.js');
 var request;
     
 process.env["NODE_TLS_REJECT_UNAUTHORIZED"] = 0;
