@@ -19,9 +19,3 @@ RUN cd /data && ls -la && npm install
 COPY healthcheck.js /
 
 ENV NODE_ENV=production
-
-# Expose Node-RED port
-EXPOSE 1880
-
-# Use default Node-RED entrypoint
-CMD ["node-red"]
