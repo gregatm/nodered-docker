@@ -29,9 +29,10 @@
         }
     ],
     "dependencies": {
-        "node-red": "4.1.8",
+        "node-red": "5.0.0",
         "passport-oauth2": "^1.8.0",
-        "ioredis": "^5.10.0"
+        "ioredis": "^5.10.0",
+        "@theotherwillembotha/node-red-telemetry": "0.1.0"
     },
     "engines": {
         "node": ">=18"
